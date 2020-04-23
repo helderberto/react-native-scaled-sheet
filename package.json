@@ -1,0 +1,57 @@
+{
+  "name": "js-library-boilerplate",
+  "version": "0.1.0",
+  "description": "js-library-boilerplate-description",
+  "main": "dist/js-library-boilerplate.js",
+  "unpkg": "dist/js-library-boilerplate.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=dev webpack --progress --colors --watch",
+    "build:umd": "NODE_ENV=production webpack",
+    "lint": "eslint src tests",
+    "test": "jest --coverage --expand",
+    "test:watch": "jest --watch",
+    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "prepublish": "yarn clean && yarn build:umd",
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "Helder Burato Berto <helder.burato@gmail.com> (https://helder.dev/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codevor/js-library-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codevor/js-library-boilerplate/issues"
+  },
+  "homepage": "https://github.com/codevor/js-library-boilerplate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "commitizen": "^4.0.3",
+    "coveralls": "^3.0.7",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "terser-webpack-plugin": "^2.2.3",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
