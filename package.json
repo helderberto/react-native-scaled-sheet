@@ -12,7 +12,7 @@
     "build:watch": "yarn build --watch",
     "lint": "eslint src",
     "lint:fix": "eslint src/*.js --fix",
-    "postinstall": "yarn clean && yarn build"
+    "prepublish": "yarn clean && yarn build"
   },
   "keywords": [
     "react-native-scaled-sheet",
