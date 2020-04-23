@@ -1,57 +1,51 @@
-# js-library-boilerplate
+# React Native Scaled Sheet
 
-[![License][license-badge]][license-url] [![Travis CI][travis-badge]][travis-url] [![Coverage Status][coverage-badge]][coverage-url] [![Commitizen][commitizen-badge]][commitizen-url]
-
-> js-library-boilerplate-description.
+A React Native interceptor for StyleSheet to scale sizes based in screen dimensions.
 
 ## Installation
 
-js-library-boilerplate is available on npm/yarn:
+react-native-scaled-sheet is available on npm/yarn:
 
 ```bash
-$ npm install js-library-boilerplate --save
-$ yarn add js-library-boilerplate
+$ npm install react-native-scaled-sheet --save
+$ yarn add react-native-scaled-sheet
 ```
 
 ## Usage
 
-### With ES6/import
-
 ```js
-import { sum } from 'js-library-boilerplate';
+import ScaledSheet from 'react-native-scaled-sheet';
 
-sum(2, 2); // => 4
-```
+const styles = ScaledSheet.create({
+  container: {
+    height: 50, // => scaleSize(50)
+    width: 50, // => scaleSize(50)
+    fontSize: 14, // => scaleFont(14)
+  },
+});
 
-### With require
+// OR:
 
-```js
-const sum = require('js-library-boilerplate').sum;
+import { StyleSheet } from 'react-native';
+import { scaleSize, scaleFont } from 'react-native-scaled-sheet';
 
-sum(2, 2); // => 4
+const styles = ScaledSheet.create({
+  container: {
+    height: scaleSize(50),
+    width: scaleSize(50),
+    fontSize: scaleFont(14),
+  },
+});
 ```
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Changelog
-
-This project adheres to [Semantic Versioning](https://semver.org/). Every release, along with the migration instructions, is documented on the Github [Releases](https://github.com/codevor/js-library-boilerplate/releases) page.
-
 ## Bugs and Sugestions
 
-Report bugs or do suggestions using the [issues](https://github.com/codevor/js-library-boilerplate/issues).
+Report bugs or do suggestions using the [issues](https://github.com/helderburato/react-native-scaled-sheet/issues).
 
 ## License
 
-[MIT License](LICENSE) © [Codevor](https://github.com/codevor)
-
-[license-badge]: https://img.shields.io/github/license/codevor/js-library-boilerplate.svg
-[license-url]: https://opensource.org/licenses/MIT
-[coverage-badge]: https://coveralls.io/repos/github/codevor/js-library-boilerplate/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/codevor/js-library-boilerplate?branch=master
-[travis-badge]: https://travis-ci.org/codevor/js-library-boilerplate.svg?branch=master
-[travis-url]: https://travis-ci.org/codevor/js-library-boilerplate
-[commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[commitizen-url]: http://commitizen.github.io/cz-cli/
+[MIT License](LICENSE) © [helderburato](https://github.com/helderburato)
