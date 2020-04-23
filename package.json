@@ -11,7 +11,8 @@
     "build": "yarn clean && babel src --out-dir dist",
     "build:watch": "yarn build --watch",
     "lint": "eslint src",
-    "lint:fix": "eslint src/*.js --fix"
+    "lint:fix": "eslint src/*.js --fix",
+    "postinstall": "yarn clean && yarn build"
   },
   "keywords": [
     "react-native-scaled-sheet",
