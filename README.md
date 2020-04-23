@@ -29,7 +29,7 @@ const styles = ScaledSheet.create({
 import { StyleSheet } from 'react-native';
 import { scaleSize, scaleFont } from 'react-native-scaled-sheet';
 
-const styles = ScaledSheet.create({
+const styles = StyleSheet.create({
   container: {
     height: scaleSize(50),
     width: scaleSize(50),
