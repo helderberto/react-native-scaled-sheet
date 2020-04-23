@@ -4,3 +4,5 @@ yarn.lock
 README.md
 .idea
 .babelrc
+LICENSE
+package.json
