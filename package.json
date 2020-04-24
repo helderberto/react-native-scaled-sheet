@@ -1,6 +1,6 @@
 {
   "name": "react-native-scaled-sheet",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A React Native interceptor for StyleSheet to scale sizes based in screen dimensions.",
   "main": "dist/scaled-sheet.js",
   "files": [
