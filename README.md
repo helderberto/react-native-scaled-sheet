@@ -38,6 +38,38 @@ const styles = StyleSheet.create({
 });
 ```
 
+## Performance
+
+In the following example you can see the performance test case:
+
+```js
+console.group('ScaledSheet');
+console.time();
+const scaledStyles = ScaledSheet.create({
+  container: {
+    height: 50,
+    width: 50,
+    fontSize: 14,
+  },
+});
+console.timeEnd();
+console.groupEnd();
+// => Output: ScaledSheet - default: 0.065185546875ms
+
+console.group('StyleSheet');
+console.time();
+const regularStyles = StyleSheet.create({
+  container: {
+    height: 50,
+    width: 50,
+    fontSize: 14,
+  },
+});
+console.timeEnd();
+console.groupEnd();
+// => Output: StyleSheet - default: 0.031982421875ms
+```
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
