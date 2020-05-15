@@ -4247,6 +4247,11 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-console-time-polyfill@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-console-time-polyfill/-/react-native-console-time-polyfill-1.2.1.tgz#3bf9a1d1d1ce3a05325fe1f2e5c4e5a1c25d910f"
+  integrity sha512-NKWZ1a/kzMOjPYAcCKEws2FAUnB9Eg70rbEhvdWU4Ure0H2v/ffqy47qooCZOWkrlAvlIR/sg1Apml4dzuE54A==
+
 react-native-view-shot@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-3.1.2.tgz#8c8e84c67a4bc8b603e697dbbd59dbc9b4f84825"
