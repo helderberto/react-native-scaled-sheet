@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'import/no-unresolved': 'off',
+    'react/jsx-filename-extension': [1, { "extensions": [".js", ".jsx"] }],
     'prettier/prettier': ['error']
   },
 };
