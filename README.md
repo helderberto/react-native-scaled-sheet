@@ -36,7 +36,8 @@ To get started using react-native-scaled-sheet, first install the package:
 
 `yarn add react-native-scaled-sheet` or `npm i react-native-scaled-sheet`
 
-<detail>
+<details>
+
 <summary><strong>Update the line base width:</strong></summary>
 
 ```jsx
@@ -53,9 +54,9 @@ const styles = ScaledSheet.create({
 });
 ```
 
-<detail>
+</details>
 
-<detail>
+<details>
 <summary><strong>Scale styles in the StyleSheet:</strong></summary>
 
 ```jsx
@@ -71,9 +72,9 @@ const styles = StyleSheet.create({
 });
 ```
 
-<detail>
+</details>
 
-<detail open>
+<details>
 <summary><strong>Update existent styles to use the ScaleSheet:</strong></summary>
 
 **BEFORE:**
@@ -106,7 +107,7 @@ const styles = ScaledSheet.create({
 
 **Note: It's easier just update the `.create` to use from ScaleSheet and that's it!**
 
-<detail>
+</details>
 
 ---
 
