@@ -113,41 +113,14 @@ const styles = ScaledSheet.create({
 
 ## Benchmark
 
-In the following example you can see the performance test case:
+The performance tests below show the comparison between using the StyleSheet offered by the React Native API and using ScaledSheet rendering 5k and 10k views. See the results:
 
-### Using ScaledSheet
+| Library     | Rendering 5k Views | Rendering 10k Views |
+| :---------- | :----------------: | :-----------------: |
+| StyleSheet  |       2465ms       |       3185ms        |
+| ScaledSheet |     **2515ms**     |     **3383ms**      |
 
-```jsx
-console.group('ScaledSheet');
-console.time();
-const scaledStyles = ScaledSheet.create({
-  container: {
-    height: 50,
-    width: 50,
-    fontSize: 14,
-  },
-});
-console.timeEnd();
-console.groupEnd();
-// => Output: ScaledSheet - default: 0.065185546875ms
-```
-
-### Using StyleSheet
-
-```jsx
-console.group('StyleSheet');
-console.time();
-const regularStyles = StyleSheet.create({
-  container: {
-    height: 50,
-    width: 50,
-    fontSize: 14,
-  },
-});
-console.timeEnd();
-console.groupEnd();
-// => Output: StyleSheet - default: 0.031982421875ms
-```
+See the test files in `examples/ExpoExampleApp`.
 
 ## Contributing
 
