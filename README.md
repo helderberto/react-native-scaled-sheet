@@ -2,7 +2,7 @@
   📏 ScaledSheet
 
   <br />
-  <img src="https://badgen.net/npm/v/react-native-scaled-sheet" alt="npm version" />
+  <img alt="npm" src="https://img.shields.io/npm/v/react-native-scaled-sheet">
   <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/react-native-scaled-sheet">
   <img alt="NPM" src="https://img.shields.io/npm/l/react-native-scaled-sheet">
 </h1>
