@@ -1,4 +1,4 @@
-export const isNotFlex = (prop) => !prop.includes('flex');
+export const notFlexProperty = (prop) => !prop.includes('flex');
 
 export const isNumber = (value) => typeof value === 'number';
 

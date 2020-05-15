@@ -1,49 +1,24 @@
-import { Dimensions, StyleSheet, PixelRatio } from 'react-native';
-import { isNumber, isNotFlex, hasFontProperty, hasProperty } from './utils';
-
-const { width, height } = Dimensions.get('window');
-const dimensions = width < height ? width : height;
-const guideLineBaseWidth = 375;
-
-export const scaleSize = (size) => PixelRatio.roundToNearestPixel((dimensions / guideLineBaseWidth) * size);
-
-export const scaleFont = (size) => size * PixelRatio.getFontScale();
+import { StyleSheet } from 'react-native';
+import { DEFAULT_GUIDE_LINE_BASE_WIDTH, DEFAULT_DIMENSIONS, scaleStyles } from './scale-utils';
 
 class ScaledSheet {
   static instanceStyleSheet = StyleSheet;
 
-  static applyStyles(newStyles) {
-    return this.instanceStyleSheet.create(newStyles);
-  }
+  static guideLineBaseWidth = DEFAULT_GUIDE_LINE_BASE_WIDTH;
 
-  static buildScaledStyles(styles) {
-    const scaledStyles = {};
+  static dimensions = DEFAULT_DIMENSIONS;
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const key in styles) {
-      if (hasProperty(styles, key)) {
-        const style = styles[key];
-        scaledStyles[key] = style;
-
-        // eslint-disable-next-line no-restricted-syntax
-        for (const prop in style) {
-          if (hasProperty(style, prop)) {
-            const value = style[prop];
-
-            if (isNumber(value) && isNotFlex(prop)) {
-              scaledStyles[key][prop] = !hasFontProperty(prop) ? scaleSize(value) : scaleFont(value);
-            }
-          }
-        }
-      }
+  static setLineBaseWidth = (newLineBaseWidth) => {
+    if (newLineBaseWidth !== this.guideLineBaseWidth) {
+      this.guideLineBaseWidth = newLineBaseWidth;
     }
+  };
 
-    return scaledStyles;
-  }
+  static getLineBaseWidth = () => this.guideLineBaseWidth;
 
   static create(styles) {
-    const scaledStyles = this.buildScaledStyles(styles);
-    return this.applyStyles(scaledStyles);
+    const scaledStyles = scaleStyles(styles, this.guideLineBaseWidth, this.dimensions);
+    return this.instanceStyleSheet.create(scaledStyles);
   }
 }
 
