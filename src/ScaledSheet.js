@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
-import { DEFAULT_GUIDE_LINE_BASE_WIDTH, DEFAULT_DIMENSIONS, scaleStyles } from './scale-utils';
 
-class ScaledSheet {
+import { BASE_WIDTH, DIMENSIONS } from './constants';
+import { scaleStyles } from './utils/scaleStyles';
+
+export default class ScaledSheet {
   static instanceStyleSheet = StyleSheet;
 
-  static guideLineBaseWidth = DEFAULT_GUIDE_LINE_BASE_WIDTH;
+  static guideLineBaseWidth = BASE_WIDTH;
 
-  static dimensions = DEFAULT_DIMENSIONS;
+  static dimensions = DIMENSIONS;
 
   static setLineBaseWidth = (newLineBaseWidth) => {
     if (newLineBaseWidth !== this.guideLineBaseWidth) {
@@ -21,5 +23,3 @@ class ScaledSheet {
     return this.instanceStyleSheet.create(scaledStyles);
   }
 }
-
-export default ScaledSheet;
