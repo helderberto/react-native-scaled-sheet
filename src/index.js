@@ -1,5 +1,5 @@
-import ScaledSheet from './scaled-sheet';
+import ScaledSheet from './ScaledSheet';
 
-export { scaleFont, scaleSize } from './scale-utils';
+export * from './utils';
 
 export default ScaledSheet;

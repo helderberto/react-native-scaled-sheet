@@ -5,12 +5,7 @@ module.exports = {
     es6: true,
   },
   parser: 'babel-eslint',
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'prettier',
-    'prettier/react'
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -19,15 +14,15 @@ module.exports = {
     ecmaVersion: 6,
     ecmaFeatures: {
       jsx: true,
-    }
+    },
   },
-  plugins: [
-    'react',
-    'prettier'
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
     'import/no-unresolved': 'off',
-    'react/jsx-filename-extension': [1, { "extensions": [".js", ".jsx"] }],
-    'prettier/prettier': ['error']
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'prettier/prettier': ['error'],
+    'import/no-cycle': 'off',
+    'import/prefer-default-export': 'off',
+    'no-restricted-syntax': 'off',
   },
 };
